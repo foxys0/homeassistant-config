@@ -17,7 +17,7 @@ group: !include groups.yaml
 #input_text: !include input_text.yaml
 #light: !include light.yaml
 script: !include scripts.yaml
-#sensor: !include sensor.yaml
+sensor: !include sensor.yaml
 #switch: !include switch.yaml
 
 arlo:
@@ -71,11 +71,6 @@ map:
 
 # Track the sun
 sun:
-
-# Sensors
-sensor:
-  # Weather prediction
-  - platform: yr
 
 # Text to speech
 tts:
