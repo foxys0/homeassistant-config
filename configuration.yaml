@@ -26,7 +26,7 @@ arlo:
 
 camera:
   - platform: arlo
-    ffmpeg_arguments: '-pred 1 -q:v 2'
+#    ffmpeg_arguments: '-pred 1 -q:v 2'
   - platform: generic
     still_image_url: !secret meteogram_png_url
     name: Forecast
