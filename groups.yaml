@@ -1,1 +1,27 @@
+# VIEWS
 
+
+camera_view:
+  view: yes
+  #name: Camera
+  icon: mdi:camcorder
+  entities:
+    - group.camera
+    - camera.camberbatch
+#    - group.camera_2
+#    - camera.ip_webcam
+
+
+
+# GROUPS
+
+camera:
+  name: Camera
+  entities:
+    - sensor.arlo_cameras
+    - sensor.battery_level_camberbatch
+    - sensor.captured_today_camberbatch
+    - sensor.last_camberbatch
+    - sensor.signal_strength_camberbatch
+#    - script.arlo_arm
+#    - script.arlo_disarm
