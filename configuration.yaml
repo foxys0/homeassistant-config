@@ -20,6 +20,18 @@ script: !include scripts.yaml
 #sensor: !include sensor.yaml
 #switch: !include switch.yaml
 
+arlo:
+  username: !secret arlo_email
+  password: !secret arlo_password
+
+camera:
+  - platform: arlo
+    ffmpeg_arguments: '-pred 1 -q:v 2'
+  - platform: generic
+    still_image_url: !secret meteogram_png_url
+    name: Forecast
+
+
 # Show links to resources in log and frontend
 introduction:
 
