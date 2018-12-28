@@ -1,5 +1,19 @@
 # VIEWS
 
+default_view:
+  view: yes
+  #name: Dashboard
+  icon: mdi:view-dashboard-variant
+  entities:
+    - group.light
+#    - group.weather
+    - group.thermostat
+#    - group.camera_buttons
+#    - group.inside_temperature
+#    - group.inside_humidity
+    - group.smoke_detector
+#    - device_tracker.matej
+#    - device_tracker.martina
 
 camera_view:
   view: yes
@@ -13,7 +27,38 @@ camera_view:
 
 
 
+
+
+lights_view:
+  view: yes
+  #name: Lights
+  icon: mdi:lightbulb
+  entities:
+    - group.living_room
+    - group.upstairs
+    - group.kitchen
+    - group.bathroom
+    - group.toilet
+    - group.hallway
+#    - switch.fluxer
+
+
+
+
 # GROUPS
+
+
+
+bathroom:
+  name: Bathroom
+  icon: mdi:lightbulb
+  entities:
+    - light.bathroom_left
+    - light.bathroom_right
+
+
+
+
 
 camera:
   name: Camera
@@ -25,3 +70,93 @@ camera:
     - sensor.signal_strength_camberbatch
 #    - script.arlo_arm
 #    - script.arlo_disarm
+
+
+
+
+
+hallway:
+  name: Hallway
+  icon: mdi:lightbulb
+  entities:
+    - light.hall
+
+
+
+
+
+
+kitchen:
+  name: Kitchen
+  icon: mdi:lightbulb
+  entities:
+    - light.kitchen_left_left
+    - light.kitchen_left
+    - light.kitchen_middle
+    - light.kitchen_right
+
+light:
+  name: Lights
+  entities:
+    - light.living_room
+    - light.upstairs
+    - light.kitchen
+    - light.bathroom
+    - light.toilet
+
+living_room:
+  name: Living room
+  icon: mdi:lightbulb
+  entities:
+    - light.angel
+    - light.left
+    - light.middle
+    - light.right
+
+media:
+  name: Media
+  icon: mdi:play-circle
+  entities:
+    - media_player.mary_and_max
+    - media_player.mary
+    - media_player.max
+    - media_player.shield
+
+
+
+
+
+
+
+smoke_detector:
+  name: Smoke & CO
+  icon: mdi:smoking
+  entities:
+    - sensor.upstairs_nest_protect_co_status
+    - sensor.upstairs_nest_protect_smoke_status
+    - sensor.upstairs_nest_protect_battery_health
+
+
+
+
+thermostat:
+  name: Thermostat
+  icon: mdi:thermometer
+  control: hidden
+  entities:
+    - climate.living_room
+    - sensor.hvac_state
+#    - script.temperature_high
+#    - script.temperature_low
+
+toilet:
+  name: Toilet
+  icon: mdi:lightbulb
+  entities:
+    - light.wc
+
+upstairs:
+  name: Upstairs
+  icon: mdi:lightbulb
+  entities:
+    - light.office
