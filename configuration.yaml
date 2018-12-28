@@ -68,9 +68,6 @@ hue:
 ifttt:
   key: !secret ifttt
 
-# Show links to resources in log and frontend
-introduction:
-
 # View all events in a logbook
 logbook:
 
