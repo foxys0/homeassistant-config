@@ -1,5 +1,8 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
 homeassistant:
-  name: Home
+  name: BlackTower
   latitude: !secret hass_latitude
   longitude: !secret hass_longitude
   elevation: 252
@@ -31,31 +34,15 @@ camera:
     still_image_url: !secret meteogram_png_url
     name: Forecast
 
-cloud:
-
-# Enables configuration UI
-config:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 # Discover some devices automatically
 discovery:
 
 ffmpeg:
 
-# Enables the frontend
-frontend:
-
 # Used for Google Calendar
 google:
   client_id: !secret google_id
   client_secret: !secret google_secret
-
-hassio:
-
-# Enables support for tracking state changes over time
-history:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
@@ -65,28 +52,8 @@ hue:
   bridges:
     - host: !secret philips_hue_bridge
 
-ifttt:
-  key: !secret ifttt
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-#map:
-
-nest:
-  client_id: !secret nest_id
-  client_secret: !secret nest_secret
-
-notify:
-  - platform: html5
-    gcm_api_key: !secret gcm_api_key
-    gcm_sender_id: !secret gcm_sender_id
 
 shopping_list:
-
-# Track the sun
-sun:
 
 timer:
   5minutes:
@@ -94,14 +61,4 @@ timer:
 
 # Text to speech
 tts:
-  - platform: google
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
+  - platform: google_translate
