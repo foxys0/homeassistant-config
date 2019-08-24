@@ -52,6 +52,9 @@ hue:
   bridges:
     - host: !secret philips_hue_bridge
 
+recorder:
+  purge_keep_days: 5
+  db_url: !secret mariadb
 
 shopping_list:
 
