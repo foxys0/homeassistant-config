@@ -1,0 +1,24 @@
+ 
+  - platform: template
+    sensors:
+      everyone_away:
+        value_template: >-
+            {{ is_state("device_tracker.matej", "not_home")
+               and is_state("device_tracker.martina", "not_home")
+            }}
+      lights_unavailable:
+        value_template: >-
+            {{ is_state("light.living_room", "unavailable")
+               or is_state("light.upstairs", "unavailable")
+               or is_state("light.kitchen", "unavailable")
+               or is_state("light.bathroom", "unavailable")
+               or is_state("light.toilet", "unavailable")
+            }}
+      someone_at_home:
+        value_template: >-
+            {{ is_state("device_tracker.matej", "home")
+               or is_state("device_tracker.martina", "home")
+            }}
+
+  - platform: workday
+    country: CZ
