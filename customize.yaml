@@ -18,3 +18,6 @@ light.office:
 
 light.toilet:
   icon: mdi:toilet
+
+light.yeelight_strip2_04cf8c776067:
+  friendly_name: Bedroom
