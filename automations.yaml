@@ -1,1 +1,46 @@
+#SET AWAY by wifi connection
+- action:
+  - data:
+      entity_id: script.set_away
+    service: script.turn_on
+  alias: Set AWAY by location
+  condition:
+    - condition: state
+      entity_id: input_boolean.disable_location
+      state: 'off'
+  id: set_away_by_location
+  trigger:
+  - entity_id: binary_sensor.everyone_away
+    from: 'off'
+    platform: state
+    to: 'on'
 
+#SET HOME by wifi connection
+- action:
+  - data:
+      entity_id: script.set_home
+    service: script.turn_on
+  - delay: 00:00:02
+  - data:
+      entity_id: script.google_home_on
+    service: script.turn_on
+  - data:
+      entity_id: media_player.max
+      message: "Welcome home"
+      language: "en-uk"
+    service: tts.google_say
+  - delay: 00:00:15
+  - data:
+      entity_id: script.google_home_off
+    service: script.turn_on
+  alias: Set HOME by location
+  condition:
+    - condition: state
+      entity_id: input_boolean.disable_location
+      state: 'off'
+  id: set_home_by_location
+  trigger:
+  - entity_id: binary_sensor.someone_at_home
+    from: 'off'
+    platform: state
+    to: 'on'
