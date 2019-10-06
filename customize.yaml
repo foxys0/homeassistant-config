@@ -1,1 +1,20 @@
+light.bathroom:
+  icon: mdi:shower
 
+light.bedroom:
+  icon: mdi:hotel
+
+light.kitchen:
+  icon: mdi:kettle
+
+light.lamp:
+  icon: mdi:lamp
+
+light.living_room:
+  icon: mdi:sofa
+
+light.office:
+  icon: mdi:notebook
+
+light.toilet:
+  icon: mdi:toilet
