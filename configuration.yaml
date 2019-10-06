@@ -15,10 +15,10 @@ automation: !include automations.yaml
 #frontend: !include frontend.yaml
 group: !include groups.yaml
 #history_graph: !include history_graph.yaml
-#input_boolean: !include input_boolean.yaml
+input_boolean: !include input_boolean.yaml
 #input_select: !include input_select.yaml
 #input_text: !include input_text.yaml
-#light: !include light.yaml
+light: !include light.yaml
 script: !include scripts.yaml
 sensor: !include sensor.yaml
 #switch: !include switch.yaml
