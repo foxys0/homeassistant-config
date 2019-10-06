@@ -1,1 +1,24 @@
-
+lights_off:
+  alias: All lights off
+  sequence:
+  - data:
+      entity_id: light.bathroom
+    service: light.turn_off
+  - data:
+      entity_id: light.hallway
+    service: light.turn_off
+  - data:
+      entity_id: light.kitchen
+    service: light.turn_off
+  - data:
+      entity_id: light.living_room
+    service: light.turn_off
+  - data:
+      entity_id: light.toilet
+    service: light.turn_off
+  - data:
+      entity_id: light.upstairs
+    service: light.turn_off
+  - data:
+      entity_id: light.lamp
+    service: light.turn_off
