@@ -6,27 +6,33 @@ default_view:
   icon: mdi:view-dashboard-variant
   entities:
 
+lights_view:
+  view: yes
+  #name: Lights
+  icon: mdi:lightbulb
+  entities:
+    - group.living_room
+    - group.upstairs
+    - group.kitchen
+    - group.bathroom
+    - group.toilet
+    - group.hallway
+
 camera_view:
   view: yes
   #name: Camera
   icon: mdi:camcorder
   entities:
 
-lights_view:
-  view: yes
-  #name: Lights
-  icon: mdi:lightbulb
-  entities:
-
-
-
 
 # GROUPS
 
 bathroom:
   name: Bathroom
-  icon: mdi:lightbulb
+  icon: mdi:shower
   entities:
+    - light.bathroom_left
+    - light.bathroom_right
 
 camera:
   name: Camera
@@ -34,22 +40,37 @@ camera:
 
 hallway:
   name: Hallway
-  icon: mdi:lightbulb
+  icon: mdi:shoe-formal
   entities:
+    - light.hall
 
 kitchen:
   name: Kitchen
-  icon: mdi:lightbulb
+  icon: mdi:kettle
   entities:
+    - light.kitchen_left_left
+    - light.kitchen_left
+    - light.kitchen_middle
+    - light.kitchen_right
 
 light:
   name: Lights
   entities:
+    - light.lamp
+    - light.living_room
+    - light.office
+    - light.bedroom
+    - light.bathroom
 
 living_room:
   name: Living room
-  icon: mdi:lightbulb
+  icon: mdi:sofa
   entities:
+    - light.lamp
+    - light.angel
+    - light.left
+    - light.middle
+    - light.right
 
 media:
   name: Media
@@ -69,10 +90,12 @@ thermostat:
 
 toilet:
   name: Toilet
-  icon: mdi:lightbulb
+  icon: mdi:toilet
   entities:
+    - light.wc
 
 upstairs:
   name: Upstairs
-  icon: mdi:lightbulb
+  icon: mdi:hotel
   entities:
+    - light.office
