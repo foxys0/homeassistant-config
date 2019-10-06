@@ -29,3 +29,10 @@ set_away:
   - data:
       entity_id: script.lights_off
     service: script.turn_on
+
+set_home:
+  alias: Set HOME
+  sequence:
+  - data:
+      entity_id: input_boolean.camera_toggle
+    service: input_boolean.turn_off
