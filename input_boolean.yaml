@@ -1,0 +1,34 @@
+alarm_toggle:
+  name: "ON / OFF"
+  initial: off
+  icon: mdi:flash
+
+alarm_by_light_toggle:
+  name: "Sunrise"
+  initial: off
+  icon: mdi:weather-sunset
+
+camera_toggle:
+  name: "ARM / DISARM"
+  initial: off
+  icon: mdi:shield-half-full
+
+celebrate_toggle:
+  name: "Lets celebrate!"
+  initial: off
+  icon: mdi:flag-variant
+
+disable_location:
+  name: "Disable location"
+  initial: off
+  icon: mdi:crosshairs-gps
+
+playstation_toggle:
+  name: "Playstation"
+  initial: off
+  icon: mdi:playstation
+
+television_toggle:
+  name: "Television"
+  initial: off
+  icon: mdi:television
