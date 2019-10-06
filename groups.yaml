@@ -15,6 +15,7 @@ lights_view:
   entities:
     - group.living_room
     - group.upstairs
+    - group.bedroom
     - group.kitchen
     - group.bathroom
     - group.toilet
@@ -35,6 +36,12 @@ bathroom:
   entities:
     - light.bathroom_left
     - light.bathroom_right
+
+bedroom:
+  name: Bedroom
+  icon: mdi:hotel
+  entities:
+    - light.yeelight_strip2_04cf8c776067
 
 camera:
   name: Camera
@@ -61,7 +68,7 @@ light:
     - light.lamp
     - light.living_room
     - light.office
-    - light.bedroom
+    - light.yeelight_strip2_04cf8c776067
     - light.bathroom
 
 living_room:
