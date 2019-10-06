@@ -11,7 +11,7 @@ homeassistant:
   customize: !include customize.yaml
 
 automation: !include automations.yaml
-#binary_sensor: !include binary_sensor.yaml
+binary_sensor: !include binary_sensor.yaml
 #frontend: !include frontend.yaml
 group: !include groups.yaml
 #history_graph: !include history_graph.yaml
