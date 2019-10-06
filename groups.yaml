@@ -5,6 +5,8 @@ default_view:
   #name: Dashboard
   icon: mdi:view-dashboard-variant
   entities:
+    - group.light
+    - device_tracker.matej
 
 lights_view:
   view: yes
