@@ -1,3 +1,37 @@
+#ARLO ARM
+- action:
+  - data:
+      entity_id: script.arlo_arm
+    service: script.turn_on
+  alias: Camera ARM by input
+  condition:
+    - condition: state
+      entity_id: script.arlo_arm
+      state: 'off'
+  id: camera_arm_by_input
+  trigger:
+  - entity_id: input_boolean.camera_toggle
+    from: 'off'
+    platform: state
+    to: 'on'
+
+#ARLO DISARM
+- action:
+  - data:
+      entity_id: script.arlo_disarm
+    service: script.turn_on
+  alias: Camera DISARM by input
+  condition:
+    - condition: state
+      entity_id: script.arlo_disarm
+      state: 'off'
+  id: camera_disarm_by_input
+  trigger:
+  - entity_id: input_boolean.camera_toggle
+    from: 'on'
+    platform: state
+    to: 'off'
+
 #ENABLE LOCATION by hallway light
 - action:
   - data:
