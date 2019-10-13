@@ -26,6 +26,7 @@ camera_view:
   #name: Camera
   icon: mdi:camcorder
   entities:
+    - camera.camberbatch
 
 
 # GROUPS
