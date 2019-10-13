@@ -1,3 +1,23 @@
+arlo_arm:
+  alias: Arlo - ARM
+  sequence:
+  - data:
+      event: arm_arlo
+    service: ifttt.trigger
+  - data:
+      entity_id: input_boolean.camera_toggle
+    service: input_boolean.turn_on
+
+arlo_disarm:
+  alias: Arlo - DISARM
+  sequence:
+  - data:
+      event: disarm_arlo
+    service: ifttt.trigger
+  - data:
+      entity_id: input_boolean.camera_toggle
+    service: input_boolean.turn_off
+
 google_home_on:
   alias: Google Home ON
   sequence:
