@@ -63,6 +63,18 @@ hallway:
   entities:
     - light.hall
 
+inside_humidity:
+  name: Inside humidity
+  icon: mdi:water
+  entities:
+    - sensor.mitemp_bt_humidity
+
+inside_temperature:
+  name: Inside temperature
+  icon: mdi:thermometer
+  entities:
+    - sensor.mitemp_bt_temperature
+
 kitchen:
   name: Kitchen
   icon: mdi:kettle
