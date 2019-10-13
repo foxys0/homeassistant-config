@@ -21,6 +21,13 @@ lights_view:
     - group.toilet
     - group.hallway
 
+media_view:
+  view: yes
+  #name: Media
+  icon: mdi:music-box-outline
+  entities:
+    - group.media
+
 camera_view:
   view: yes
   #name: Camera
@@ -86,6 +93,9 @@ media:
   name: Media
   icon: mdi:play-circle
   entities:
+    - media_player.mini
+    - media_player.max
+    - media_player.all
 
 smoke_detector:
   name: Smoke & CO
