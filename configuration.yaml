@@ -55,6 +55,10 @@ hue:
 ifttt:
   key: !secret ifttt
 
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+
 recorder:
   purge_keep_days: 5
   db_url: !secret mariadb
