@@ -87,6 +87,7 @@ kitchen:
 light:
   name: Lights
   entities:
+    - light.kitchen
     - light.lamp
     - light.living_room
     - light.office
