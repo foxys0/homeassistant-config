@@ -1,0 +1,64 @@
+#INPUT_SELECT
+
+alarm:
+  name: Time
+  icon: mdi:alarm
+  initial: "07:40"
+  options:
+    - "07:00"
+    - "07:05"
+    - "07:10"
+    - "07:15"
+    - "07:20"
+    - "07:25"
+    - "07:30"
+    - "07:35"
+    - "07:40"
+    - "07:45"
+    - "07:50"
+    - "07:55"
+
+temp_high:
+  name: High temperature
+  icon: mdi:arrow-collapse-up
+  initial: "19.0"
+  options:
+    - "20.5"
+    - "20.0"
+    - "19.5"
+    - "19.0"
+    - "18.5"
+
+temp_base:
+  name: Base temperature
+  icon: mdi:arrow-collapse-vertical
+  initial: "16.5"
+  options:
+    - "19.0"
+    - "18.5"
+    - "18.0"
+    - "17.5"
+    - "17.0"
+    - "16.5"
+
+temp_low:
+  name: Low temperature
+  icon: mdi:arrow-collapse-down
+  initial: "16.5"
+  options:
+    - "18.5"
+    - "18.0"
+    - "17.5"
+    - "17.0"
+    - "16.5"
+
+temp_night:
+  name: Night temperature
+  icon: mdi:weather-night
+  initial: "16.5"
+  options:
+    - "18.5"
+    - "18.0"
+    - "17.5"
+    - "17.0"
+    - "16.5"
