@@ -1,0 +1,25 @@
+- platform: flux
+  lights:
+    - light.angel
+    - light.left
+    - light.middle
+    - light.right
+    - light.bathroom_left
+    - light.bathroom_right
+    - light.kitchen_left_left
+    - light.kitchen_left
+    - light.kitchen_middle
+    - light.kitchen_right
+    - light.wc
+    - light.office
+  name: fluxer
+  start_time: '7:00'
+  stop_time: '21:00'
+  start_colortemp: 6500
+  sunset_colortemp: 3000
+  stop_colortemp: 2200
+  brightness: 1
+  disable_brightness_adjust: True
+  mode: mired
+  transition: 30
+  interval: 60
