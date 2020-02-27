@@ -7,6 +7,8 @@ default_view:
   entities:
     - group.light
     - device_tracker.matej
+    - group.inside_temperature
+    - group.inside_humidity
 
 lights_view:
   view: yes
