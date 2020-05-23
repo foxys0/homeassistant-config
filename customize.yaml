@@ -30,3 +30,11 @@ script.arlo_arm:
 script.arlo_disarm:
   icon: mdi:camcorder-off
   friendly_name: DISARM
+
+sensor.mitemp_bt_temperature
+  icon: mdi:thermometer
+  friendly_name: Temperature
+
+sensor.mitemp_bt_humidity
+  icon: mdi:water
+  friendly_name: Humidity
