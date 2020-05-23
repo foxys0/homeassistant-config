@@ -5,20 +5,20 @@ default_view:
   #name: Dashboard
   icon: mdi:view-dashboard-variant
   entities:
-    - group.light
+    - group.lights_downstairs
+    - group.lights_upstairs
     - device_tracker.matej
     - group.inside_temperature
-    - group.inside_humidity
 
 lights_view:
   view: yes
   #name: Lights
   icon: mdi:lightbulb
   entities:
-    - group.living_room
-    - group.upstairs
-    - group.bedroom
     - group.kitchen
+    - group.living_room
+#    - group.office
+    - group.bedroom
     - group.bathroom
     - group.toilet
     - group.hallway
@@ -65,17 +65,12 @@ hallway:
   entities:
     - light.hall
 
-inside_humidity:
-  name: Inside humidity
-  icon: mdi:water
-  entities:
-    - sensor.mitemp_bt_humidity
-
 inside_temperature:
-  name: Inside temperature
+  name: Temperature & Humidity
   icon: mdi:thermometer
   entities:
     - sensor.mitemp_bt_temperature
+    - sensor.mitemp_bt_humidity
 
 kitchen:
   name: Kitchen
@@ -86,15 +81,19 @@ kitchen:
     - light.kitchen_middle
     - light.kitchen_right
 
-light:
-  name: Lights
+lights_downstairs:
+  name: Downstairs
   entities:
     - light.kitchen
     - light.lamp
     - light.living_room
+    - light.bathroom
+
+lights_upstairs:
+  name: Upstairs
+  entities:
     - light.office
     - light.yeelight_strip2_04cf8c776067
-    - light.bathroom
 
 living_room:
   name: Living room
@@ -131,8 +130,8 @@ toilet:
   entities:
     - light.wc
 
-upstairs:
-  name: Upstairs
-  icon: mdi:hotel
-  entities:
-    - light.office
+#office:
+#  name: Office
+#  icon: mdi:hotel
+#  entities:
+#    - light.office
